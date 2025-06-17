@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.14)
+project(hyperfent)
+add_executable(hyperfent main.cpp service.cpp)
+target_compile_definitions(hyperfent PUBLIC _CRT_SECURE_NO_WARNINGS)
+set_target_properties(hyperfent PROPERTIES LINK_FLAGS " /MANIFESTUAC:\"level='requireAdministrator' uiAccess='false'\" ")
+set_property(TARGET hyperfent PROPERTY CXX_STANDARD 20)
